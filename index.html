@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/main.js" defer></script>
+    <title>Weather app</title>
+</head>
+<body>
+    
+
+    <main class="container">
+        <header class="weather-info-wrapper">
+            <div class="city-info">
+                <div class="weather-status">
+                    <div class="icon">
+                    </div>
+                    <div class="condition">
+                        <p>cloudy</p>
+                    </div>
+                </div>
+                <div class="city">
+                    
+                </div>
+                <div class="temp">
+                    <h3><span class="temper">28</span> °c</h3>
+                </div>
+                <div class="search">
+                    <p><i class="fa fa-map-marker"></i>change location</p>
+                    <input type="text" id="query" value="Sudan">
+                </div>
+            </div>
+            <div class="status-details">
+                <div class="humidity">
+                    <div class="icons">
+                        <img src="images/humidityi.svg" alt="">
+                    </div>
+                    <div class="humidity-details details">
+                        <p>humidity</p>
+                        <h3> <span id="humidity"></span>%</h3>
+                    </div>
+                </div>
+                <div class="air-pre">
+                    <div class="icons">
+                        <img src="./images/pressurey.svg" alt="">
+                    </div>
+                    <div class="air_pre-details details">
+                        <p>air-pressure</p>
+                        <h3> <span id="air_pre"></span>PS</h3>
+                    </div>
+                </div>
+                <div class="rain">
+                    <div class="icons">
+                        <img src="./images/rainyi.svg " alt="">
+                    </div>
+                    <div class="rain-detail detailss">
+                        <p>chance of rain</p>
+                        <h3> <span id="rain"></span></h3>
+                    </div>
+                </div>
+                <div class="wind">
+                    <div class="icons">
+                        <img src="./images/windy.svg" alt="">
+                    </div>
+                    <div class="wind-details details">
+                        <p>wind speed</p>
+                        <h3> <span id="wind"></span> KPH</h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <footer class="daily-weather-info">
+            <div class="days">
+                <div class="icon">
+                    <img src="images/left-arrow.svg" alt="">
+                </div>
+                <div class="day">Januray</div>
+                <!-- <div class="buttons">
+                    <button class="left">left</button>
+                    <button class="right">right</button>
+                </div> -->
+            </div>
+                <div class="cards" id="cards">
+    
+                </div>
+        </footer>
+    </main>
+</body>
+</html>

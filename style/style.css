@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'Roboto', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.container {
+  width: 95%;
+  max-width: 1400px;
+  height: 92%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weather-info-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.weather-info-wrapper .city-info {
+  text-transform: capitalize;
+}
+
+.weather-info-wrapper .city-info .weather-status .icon {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.weather-info-wrapper .city-info .weather-status .icon:hover {
+  -webkit-animation: swing 2s linear 0s infinite forwards;
+          animation: swing 2s linear 0s infinite forwards;
+}
+
+.weather-info-wrapper .city-info .weather-status .condition p {
+  font-size: 1.4rem;
+}
+
+.weather-info-wrapper .city-info .city h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.weather-info-wrapper .city-info .temp h3 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.weather-info-wrapper .city-info .search input {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 0.4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px 0 10px 0;
+  border: none;
+  outline: none;
+  color: #272525;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.weather-info-wrapper .city-info .search input:focus {
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+.weather-info-wrapper .status-details {
+  padding-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weather-info-wrapper .status-details .humidity,
+.weather-info-wrapper .status-details .air-pre,
+.weather-info-wrapper .status-details .rain,
+.weather-info-wrapper .status-details .wind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.weather-info-wrapper .status-details .humidity {
+  margin-top: 2rem;
+}
+
+.weather-info-wrapper .status-details .humidity .icons img,
+.weather-info-wrapper .status-details .air-pre .icons img,
+.weather-info-wrapper .status-details .rain .icons img,
+.weather-info-wrapper .status-details .wind .icons img {
+  width: 30px;
+}
+
+.weather-info-wrapper .status-details .air-pre h3 span {
+  margin-right: 5px;
+}
+
+.weather-info-wrapper .status-details .icons {
+  margin-right: 1rem;
+}
+
+.weather-info-wrapper .status-details .details {
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.weather-info-wrapper .status-details .details p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.weather-info-wrapper .status-details .details h3 {
+  font-size: 1.2rem;
+}
+
+.daily-weather-info {
+  padding: 2rem;
+  position: relative;
+}
+
+.daily-weather-info .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.daily-weather-info .days .day {
+  margin-left: 0.2rem;
+  font-weight: 700;
+}
+
+.daily-weather-info .days .icon img {
+  width: 10px;
+}
+
+.daily-weather-info .cards {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.daily-weather-info .cards .card {
+  margin-right: 3rem;
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  color: black;
+  position: relative;
+  left: 0;
+  width: 150px;
+  text-transform: capitalize;
+  color: white;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.daily-weather-info .cards .card .time {
+  padding: 1rem 0;
+}
+
+.daily-weather-info .cards .card .time span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.daily-weather-info .cards .card .degree {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.daily-weather-info .cards .card .degree span {
+  padding-right: 3px;
+}
+
+.daily-weather-info .cards .card .up-to {
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.fa-map-marker {
+  position: relative;
+  margin-right: 8px;
+}
+
+.fa-map-marker::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  top: 1px;
+  left: 1px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+    background-repeat: no-repeat;
+  }
+  .weather-info-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .weather-info-wrapper .city-info {
+    margin-bottom: 1rem;
+  }
+  .weather-info-wrapper .status-details {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-right: 0;
+  }
+  .weather-info-wrapper .status-details .humidity {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .weather-info-wrapper {
+    text-align: center;
+  }
+  .weather-info-wrapper .status-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
+}
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(5px);
+            transform: translate(5px);
+  }
+  75% {
+    -webkit-transform: translate(-5px);
+            transform: translate(-5px);
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(5px);
+            transform: translate(5px);
+  }
+  75% {
+    -webkit-transform: translate(-5px);
+            transform: translate(-5px);
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
